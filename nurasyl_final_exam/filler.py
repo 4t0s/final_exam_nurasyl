@@ -1,8 +1,8 @@
-import requests
-import json
+# import requests
+# import json
 import sqlite3
-import datetime
-import random
+# import datetime
+# import random
 
 connection = sqlite3.connect('cinema_store.db')
 
@@ -39,28 +39,28 @@ cursor = connection.cursor()
 #         f'INSERT INTO afisha (name, genre, year, description, rating) VALUES ("{name}","{genre}",{year},"{description}",{rating})')
 #     connection.commit()
     
-cinemas = [
-    {
-        'name':'Eurasia Cinema 7',
-        'address': 'Kazan Mamaev st.,  11/1'
-    },
-    {
-        'name':'Chaplin Cinemas',
-        'address': 'Bolshoy Morskoi pereulok, d.1'
-    },
-    {
-        'name':'Arman',
-        'address': 'Lenina, 33'
-    },
-    {
-        'name':'Kinopark',
-        'address': 'Tverskaya ul., 56'
-    },
-    {
-        'name':'Arsenal',
-        'address': 'Prospect Mira str., 28'
-    },
-]
+# cinemas = [
+#     {
+#         'name':'Eurasia Cinema 7',
+#         'address': 'Kazan Mamaev st.,  11/1'
+#     },
+#     {
+#         'name':'Chaplin Cinemas',
+#         'address': 'Bolshoy Morskoi pereulok, d.1'
+#     },
+#     {
+#         'name':'Arman',
+#         'address': 'Lenina, 33'
+#     },
+#     {
+#         'name':'Kinopark',
+#         'address': 'Tverskaya ul., 56'
+#     },
+#     {
+#         'name':'Arsenal',
+#         'address': 'Prospect Mira str., 28'
+#     },
+# ]
 
 # for cinema in cinemas: 
 #     name = cinema.get('name', 'Unknown') 
@@ -92,13 +92,13 @@ cinemas = [
 #     connection.commit()
 
 
-afishas = [i for i in range(1, 51)]
-rooms = [random.randint(1, 6) for i in range(1,51)]
-rows = [random.randint(1, 16) for i in range(1,51)]
-columns = [random.randint(1, 16) for i in range(1,51)]
+# afishas = [i for i in range(1, 51)]
+# rooms = [random.randint(1, 6) for i in range(1,51)]
+# rows = [random.randint(1, 16) for i in range(1,51)]
+# columns = [random.randint(1, 16) for i in range(1,51)]
 
-for i in range(0 ,50):
-    cursor.execute(
-        f'insert into place (afisha_id, room, row, seat) VALUES ({afishas[i]}, {rooms[i]}, {rows[i]}, {columns[i]})'
-    )
-    connection.commit()
+# for i in range(0 ,50):
+#     cursor.execute(
+#         f'insert into place (afisha_id, room, row, seat) VALUES ({afishas[i]}, {rooms[i]}, {rows[i]}, {columns[i]})'
+#     )
+#     connection.commit()
